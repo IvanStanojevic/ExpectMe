@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TakePhotoCell" customModule="ExpectMe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="261" height="275"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="261" height="275"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hll-dz-BHv">
+                        <rect key="frame" x="0.0" y="0.0" width="261" height="275"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="KhB-gZ-eDk">
+                                <rect key="frame" x="83" y="70" width="95" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="DtY-Nh-xjG"/>
+                                    <constraint firstAttribute="width" constant="95" id="eL8-rM-Vot"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ap-zx-H3o">
+                                <rect key="frame" x="20" y="215" width="221" height="40"/>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.52941176469999995" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="vYp-Zi-gJv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="TAKE PICTURE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="takePictureBtnAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="VUF-BN-q7Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KhB-gZ-eDk" firstAttribute="centerX" secondItem="hll-dz-BHv" secondAttribute="centerX" id="442-3n-SZN"/>
+                            <constraint firstItem="0ap-zx-H3o" firstAttribute="centerX" secondItem="hll-dz-BHv" secondAttribute="centerX" id="Kfp-l5-uhU"/>
+                            <constraint firstItem="0ap-zx-H3o" firstAttribute="leading" secondItem="hll-dz-BHv" secondAttribute="leading" constant="20" id="dnz-Q7-mQC"/>
+                            <constraint firstItem="KhB-gZ-eDk" firstAttribute="centerY" secondItem="hll-dz-BHv" secondAttribute="centerY" constant="-20" id="k1J-tm-mmr"/>
+                            <constraint firstAttribute="bottom" secondItem="0ap-zx-H3o" secondAttribute="bottom" constant="20" id="kcn-Yi-PR5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="hll-dz-BHv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Md6-rT-mtN"/>
+                <constraint firstItem="hll-dz-BHv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="QUF-Iw-xMr"/>
+                <constraint firstAttribute="trailing" secondItem="hll-dz-BHv" secondAttribute="trailing" id="ecx-n1-OG3"/>
+                <constraint firstAttribute="bottom" secondItem="hll-dz-BHv" secondAttribute="bottom" id="zNU-w6-RhD"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="261" height="275"/>
+            <point key="canvasLocation" x="284.78260869565219" y="130.24553571428572"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="img_placeholder" width="96" height="85.5"/>
+    </resources>
+</document>
